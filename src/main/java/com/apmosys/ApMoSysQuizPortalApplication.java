@@ -6,6 +6,8 @@ package com.apmosys;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 
 
@@ -16,6 +18,11 @@ public class ApMoSysQuizPortalApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApMoSysQuizPortalApplication.class, args);
+	}
+	
+	@Bean
+	RestTemplate restTemplate() {
+		return new RestTemplate();
 	}
 
 //	@Autowired
